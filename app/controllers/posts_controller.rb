@@ -1,12 +1,5 @@
 class PostsController < ApplicationController  
 
-  before_filter :spawn_blogger
-  respond_to :json
-
-  def spawn_blogger
-    @blogger = Blogger.new(:token => session[:access_token] , :service => 'blogger')
-  end
-  
   def index
     posts = @blogger.all_posts(params[:blog_id])
   	render :json => posts.to_json
@@ -26,10 +19,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # def update
-  #   result = Googler.update_posts(:postId => params[:id], :blogId => params[:blog_id], :post => params[:post] )
-  #   render :json => result.to_json
-  # end
 
   def patch_post
   	#this works, now need to write the angular service

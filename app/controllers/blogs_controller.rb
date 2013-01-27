@@ -1,13 +1,4 @@
 class BlogsController < ApplicationController 
-
-  before_filter :spawn_blogger
-  respond_to :json
-
-  def spawn_blogger
-    @blogger = Blogger.new(:token => session[:access_token] , :service => 'blogger')
-  end
-
-
   
   def index
   	result = @blogger.list_blogs_by_user({'userId' => 'self'})
@@ -28,6 +19,4 @@ class BlogsController < ApplicationController
     end
   end
 
-
-  
 end
