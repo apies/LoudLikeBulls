@@ -34,6 +34,7 @@ end
 
 
 gem 'pry'
+gem 'pry-debugger'
 gem 'httparty'
 gem 'faye'
 gem 'google-api-client', :require => 'google/api_client'

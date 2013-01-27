@@ -1,4 +1,4 @@
-class PostsController < ApplicationController  
+class PostsController < BloggerController  
 
   def index
     posts = @blogger.all_posts(params[:blog_id])

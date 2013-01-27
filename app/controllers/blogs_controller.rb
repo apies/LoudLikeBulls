@@ -1,4 +1,4 @@
-class BlogsController < ApplicationController 
+class BlogsController < BloggerController 
   
   def index
   	result = @blogger.list_blogs_by_user({'userId' => 'self'})

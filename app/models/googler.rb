@@ -7,6 +7,7 @@ class Googler
 
   def initialize(options)
     @token = options[:token]
+
     create_client(options[:service])
   end
 
@@ -63,6 +64,10 @@ class Googler
     execution_hash = build_execution_hash(method.to_s, args.first)
     #binding.pry
     result = client.execute(execution_hash)
+  end
+
+  def self.do_thing
+    puts "thing"
   end
 
 

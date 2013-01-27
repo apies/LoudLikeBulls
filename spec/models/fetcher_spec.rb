@@ -1,6 +1,6 @@
 require 'spec_helper' 
 
-describe Googler::Fetcher do 
+describe Fetcher do 
 
   let(:googler) do
     stub_result = double('result_mock_thing')

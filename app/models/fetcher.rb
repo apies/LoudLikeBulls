@@ -1,4 +1,4 @@
- class Googler
+# class Googler
    class Fetcher
     attr_reader :records, :remainder, :request_count, :next_page_token
 
@@ -20,4 +20,4 @@
       @records
     end
   end
-end
+#end
