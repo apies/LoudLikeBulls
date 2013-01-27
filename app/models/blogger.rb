@@ -19,7 +19,7 @@ class Blogger < Googler
     @fetcher = Fetcher.new(number_of_posts)
     request_lambda = ->(blog_id, token) do 
       params = { :blogId => blog_id, :maxResults => 20 }
-      params.merge(:pageToken => token) if token
+      params.merge!(:pageToken => token) unless token.blank?
       list_posts(params)
     end
     fetcher.fetch_records(blog_id, &request_lambda)
@@ -28,10 +28,10 @@ class Blogger < Googler
 
   def fetch_post_names_and_ids(blog_id, number_of_posts)
     @fetcher = Fetcher.new(number_of_posts)
-    request_lambda = ->(blog_id, token) do 
+    request_lambda  = ->(blog_id, token)  do
       params = { :blogId => blog_id, :maxResults => 20, :fields =>'nextPageToken, items(title, id)' }
-      params.merge(:pageToken => token) if token
-      list_posts(params)
+      params.merge!(:pageToken => token) unless token.blank? 
+      list_posts(params) 
     end
     fetcher.fetch_records(blog_id, &request_lambda)
   end

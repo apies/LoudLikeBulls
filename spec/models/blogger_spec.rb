@@ -1,4 +1,4 @@
-require 'spec_helper'   
+require 'spec_helper'    
 describe Blogger do
 
 
@@ -26,9 +26,10 @@ describe Blogger do
 			posts_count.should be_a(Integer)
 		end
 
-		it "should be able to fetch 77 posts from the quiet like horses blog" do
+		it "should be able to fetch 27 posts from the quiet like horses blog" do
 			posts = blogger.fetch_post_names_and_ids(qlh_id, 27)
 			posts.count.should eq 27
+			posts.should have_all_unique_ids
 		end
 
 		it "should be able to get all posts for a blog" do
