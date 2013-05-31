@@ -26,7 +26,7 @@ gem 'jquery-rails'
 group :test, :development do #, :development do
   #gem 'capybara', '~> 0.4.1'
   gem 'rspec-rails'
-  gem 'capybara-webkit', '~> 0.5.0'
+  gem 'capybara', '~> 2.0'
   gem 'launchy'
   #gem 'vcr'
 end

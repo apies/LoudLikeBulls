@@ -5,7 +5,7 @@ module GooglerTestingService
 		define_method( 'create_client',
 			->(service) do
 				@client = Google::APIClient.new
-			    key = Google::APIClient::PKCS12.load_key('./certs/b92e1baa16c1813b73949c7384f38fd79537ed6e-privatekey.p12', 'notasecret')
+			    key = Google::APIClient::PKCS12.load_key('./certs/3e2a044de811dc2bec5e1f728eec5dfd40809fbc-privatekey.p12', 'notasecret')
 			    service_account = Google::APIClient::JWTAsserter.new(
 			      '342909415861-58lunvc3h6b64b211i17rb0vi95gj5gp@developer.gserviceaccount.com',
 			      'https://www.googleapis.com/auth/blogger',

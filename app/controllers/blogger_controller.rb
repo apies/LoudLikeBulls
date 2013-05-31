@@ -1,6 +1,6 @@
 class BloggerController < ActionController::Base
 	
-	before_filter :spawn_blogger
+  before_filter :spawn_blogger
   respond_to :json
 
   def spawn_blogger
