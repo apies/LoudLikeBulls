@@ -117,6 +117,12 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.23)
+    mongoid (3.0.23)
+      activemodel (~> 3.1)
+      moped (~> 1.2)
+      origin (~> 1.0)
+      tzinfo (~> 0.3.22)
+    moped (1.5.0)
     multi_json (1.7.4)
     multi_xml (0.5.3)
     multipart-post (1.2.0)
@@ -136,6 +142,7 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
+    origin (1.1.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -226,6 +233,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   launchy
+  mongoid (~> 3.0.0)
   oauth2
   omniauth-google-oauth2
   pry

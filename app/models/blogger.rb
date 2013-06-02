@@ -11,7 +11,7 @@ class Blogger < Googler
 
   def all_posts(blog_id)
     posts_count = count_posts(blog_id)
-    result = fetch_post_names_and_ids(blog_id, posts_count)
+    result = fetch_posts(blog_id, posts_count)
     result 
   end
 
